@@ -60,6 +60,8 @@ router.put('/:id', (req, res) => {
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     //if req.body has key values to match the model you can use req.body instead
     User.update(req.body, {
+        //add hook for bcrypt so beforeUpdate method works
+        individualHooks: true,
         //update method combines parameters for crreting and lookoing up data 
         //pass req.body to provide new data we want to use in the update
         //use req.params.id to indicate exactly where we want the new data to be used 

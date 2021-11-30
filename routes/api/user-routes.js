@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
     //Access our User model and run . findall() method
     //findAll is equivelent to SELECT * FROM users
     User.findAll({
+        //prevent passwords from displaying in the query 
         attributes: {exclude: ['password']}
     })
         .then(dbUserData => res.json(dbUserData))

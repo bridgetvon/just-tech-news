@@ -1,4 +1,4 @@
-const { Model, Datatypes, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 //create and define the post model 
@@ -43,4 +43,4 @@ Post.init(
     }
 );
 
-module.exports= Post;
+module.exports = Post;

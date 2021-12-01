@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 //turn on connection to db and server 
+//set force property to true then the database associations 
+//must sync with the model definitions and asssociations 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });

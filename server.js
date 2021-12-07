@@ -14,7 +14,7 @@ app.use(routes);
 //turn on connection to db and server 
 //set force property to true then the database associations 
 //must sync with the model definitions and asssociations 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
 
